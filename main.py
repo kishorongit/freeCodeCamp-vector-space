@@ -4,7 +4,7 @@ class R2Vector:
         self.y = y
 
     def norm(self):
-        return (self.x**2 + self.y**2)**0.5
+        return sum(val**2 for val in vars(self).values())**0.5
 
     def __str__(self):
         return f'{self.x, self.y}'
