@@ -7,7 +7,7 @@ class R2Vector:
         return sum(val**2 for val in vars(self).values())**0.5
 
     def __str__(self):
-        return f'{self.x, self.y}'
+        return str(tuple(getattr(self, i) for i in vars(self)))
 
 
 class R3Vector(R2Vector):
